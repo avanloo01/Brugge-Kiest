@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1C3C77BD-7841-42BA-9E60-E4FC9F961966}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TemplateGuid>{6143fdea-f3c2-4a09-aafa-6e230626515e}</TemplateGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>BruggeKiest0_1.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>BruggeKiest0_1.iOS</AssemblyName>
+    <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+    <ProvisioningType>automatic</ProvisioningType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>ARM64</MtouchArch>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>None</MtouchLink>
+    <MtouchInterpreter>-all</MtouchInterpreter>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>ARM64</MtouchArch>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <None Include="Entitlements.plist" />
+    <None Include="Info.plist" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Renderers\CustomNavigationPageRenderer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <InterfaceDefinition Include="Resources\MyLaunchScreen.storyboard" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-40.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-60.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-58.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-87.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-80.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-120-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-120-1-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-180-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-20.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-40-2.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-29.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-58-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-40-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-80-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-76.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-152.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-167.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-1024.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-120-1-2.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-180-1-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-1024-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-16.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-32.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-32-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-64.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-128.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-256.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-256-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-512-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-512-1-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-1024-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1269" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
+    <PackageReference Include="Xam.Plugin.Media">
+      <Version>5.0.1</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\BruggeKiest0_1\BruggeKiest0_1.csproj">
+      <Project>{11B58608-3B0F-45D3-9094-9F2A8091A82C}</Project>
+      <Name>BruggeKiest0_1</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets.xcassets\logo_splash_screen.imageset\" />
+    <Folder Include="Renderers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Achtergrond1blur.png" />
+    <BundleResource Include="Resources\Achtergrond1.png" />
+    <BundleResource Include="Resources\SplashScreen320X480.png" />
+    <BundleResource Include="Resources\SplashScreen640X960.png" />
+    <BundleResource Include="Resources\SplashScreen640X1136.png" />
+    <BundleResource Include="Resources\logo.png" />
+    <BundleResource Include="Resources\back_button_image%403x.png" />
+    <BundleResource Include="Resources\back_button_image%402x.png" />
+    <BundleResource Include="Resources\back_button_image.png" />
+    <BundleResource Include="Resources\MeerInfo.png" />
+    <BundleResource Include="Resources\HartBox%403x.png" />
+    <BundleResource Include="Resources\HartBox%402x.png" />
+    <BundleResource Include="Resources\HartBox.png" />
+    <BundleResource Include="Resources\KruisBox%403x.png" />
+    <BundleResource Include="Resources\KruisBox%402x.png" />
+    <BundleResource Include="Resources\KruisBox.png" />
+    <BundleResource Include="Resources\visibility_off%401x.png" />
+    <BundleResource Include="Resources\visibility_off%402x.png" />
+    <BundleResource Include="Resources\visibility_off%403x.png" />
+    <BundleResource Include="Resources\visibility_black%401x.png" />
+    <BundleResource Include="Resources\visibility_black%402x.png" />
+    <BundleResource Include="Resources\visibility_black%403x.png" />
+    <BundleResource Include="Resources\skip_next%401x.png" />
+    <BundleResource Include="Resources\skip_next%402x.png" />
+    <BundleResource Include="Resources\skip_next%403x.png" />
+  </ItemGroup>
+</Project>

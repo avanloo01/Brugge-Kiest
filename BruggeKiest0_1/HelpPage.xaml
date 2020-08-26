@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="BruggeKiest0_1.HelpPage" NavigationPage.HasBackButton="False">
+    
+    
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal" VerticalOptions="Start" Spacing="10">
+            <ImageButton Source="back_button_image.png" Clicked="Back_Clicked" BackgroundColor="Transparent"/>                        
+        </StackLayout>
+    </NavigationPage.TitleView>
+
+    <Grid>
+        <Image Source="Achtergrond1blur" Aspect="AspectFill"/>
+        <Frame
+            HorizontalOptions="Center"
+            Margin="20,50,20,0"
+            Padding="10"
+            WidthRequest="300"
+            HasShadow="true" BackgroundColor="Transparent">
+            <FlexLayout
+                x:Name="TextContainer"
+                Direction="Row"
+                AlignItems="End"
+                JustifyContent="SpaceBetween"
+                Wrap="Wrap">
+                <Label FontSize="Medium" LineHeight="1" TextColor="Black" HorizontalTextAlignment="Center"
+                       Text="Dit is een app, uitgegeven door de gemeente Brugge in een poging om onze prachtige stad vooruit te helpen. Hier zal u de recente voorstellen vinden van de gemeenteraad. Deze app laat u toe om uw mening te laten horen over voorstellen van de raad. Vindt u een voorstel goed, dan klikt u, eenvoudig weg, op het hartje. Een andere mogelijkheid is swipen naar rechts. Als u een voorstel echter niet leuk of goed vindt, dan klikt u op het rode kruis. Met een swipe naar links kunnen we dergelijke meningen ook registreren."
+                       FontFamily="AirFontBook"/>
+            </FlexLayout>
+        </Frame>
+    </Grid>
+</ContentPage>

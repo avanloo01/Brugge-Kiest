@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:BruggeKiest0_1"
+             x:Class="BruggeKiest0_1.LoginPage">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical"
+                     Padding="30"
+                     Spacing="60">
+            <Image HeightRequest="150"
+                   Source="logo.png"
+                   x:Name="image"/> 
+            <StackLayout Padding="15"
+                         Spacing="20">
+                <Entry Placeholder="Email *"
+                       PlaceholderColor=" #404040"/>
+                <Grid>
+                    <Entry Placeholder="Password *"
+                           PlaceholderColor=" #404040"
+                           IsPassword="{Binding Source={x:Reference ShowPasswordActualTrigger}, Path=HidePassword}"/>
+                    <ImageButton VerticalOptions="Center"
+                          Margin="0,0,10,0"
+                         HeightRequest="20"
+                         HorizontalOptions="End"
+                         Source="visibility_black">
+                             <ImageButton.Triggers>
+                                  <EventTrigger Event="Clicked">
+                                       <local:ShowPasswordTriggerAction ShowIcon="visibility_off"
+                                                                        HideIcon="visibility_black"
+                                                                        x:Name="ShowPasswordActualTrigger"/>
+                                   </EventTrigger>
+                            </ImageButton.Triggers>
+                    </ImageButton>
+                </Grid>
+                <Label Text="Password vergeten?"
+                       TextColor="Gray"
+                       FontSize="15" 
+                       FontFamily="AirFontLight">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ForgotPass"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                <Button Text="Login"
+                        TextColor="White"
+                        x:Name="Scanner"
+                        Clicked="LoginClicked"
+                        FontAttributes="Bold"
+                        FontSize="Large"
+                        HorizontalOptions="FillAndExpand"  
+                        BackgroundColor="#cc0000"
+                        CornerRadius="20"/> 
+            </StackLayout>
+        </StackLayout>  
+    </ContentPage.Content>
+</ContentPage>

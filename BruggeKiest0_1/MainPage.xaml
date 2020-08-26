@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:swipeCardView="clr-namespace:MLToolkit.Forms.SwipeCardView;assembly=MLToolkit.Forms.SwipeCardView"
+             xmlns:bruggekiest0_1="clr-namespace:BruggeKiest0_1"
+             xmlns:rv="clr-namespace:Sharpnado.MaterialFrame;assembly=Sharpnado.MaterialFrame"
+             mc:Ignorable="d" x:Class="BruggeKiest0_1.MainPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="SKIP" Order="Primary" Text="Skip" Icon="skip_next.png" Priority="0" Clicked="SKIP_Clicked"/>
+        <ToolbarItem Name="MenuItem1" Order="Primary" Icon="MeerInfo.png" Text="Item 1" Priority="0" Clicked="Help_Clicked"/>
+    </ContentPage.ToolbarItems>    
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="9*"/>
+                <RowDefinition Height="9*"/>
+                <RowDefinition Height="17*"/>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="0.01*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Image Grid.RowSpan="6" Grid.ColumnSpan="6" Source="Achtergrond1.png" Aspect="AspectFill"/>
+            <swipeCardView:SwipeCardView
+                x:Name="swipeCardView" 
+                Grid.Row = "1" Grid.ColumnSpan = "6" Grid.RowSpan = "5"
+                HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                SupportedSwipeDirections="Left,Right, Down" BackCardScale="0" CardRotation="45"
+                SupportedDraggingDirections="Left,Right">
+                <swipeCardView:SwipeCardView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <rv:MaterialFrame AcrylicGlowColor="DarkGray"
+                                              MaterialBlurStyle="Light"
+                                              MaterialTheme="AcrylicBlur"
+                                              HorizontalOptions = "Fill"
+                                              BackgroundColor = "DarkGray"
+                                              VerticalOptions = "Fill"
+                                              CornerRadius = "30"/>
+                            <Label Text="{Binding Titel}" HorizontalOptions="Center" FontFamily="AirFontMedium"
+                                   FontAttributes="Bold" FontSize="Title" TranslationY="10" TextColor="Black"/>
+                            <Label Text="{Binding Inhoud}"
+                                   FontFamily="AirFontBook"
+                                   TranslationY="50"
+                                   TranslationX="10"
+                                   TextColor="Black"
+                                   HorizontalTextAlignment="Start"
+                                   Margin="10, 10, 50, 0" />
+                        </Grid>
+                    </DataTemplate>
+                </swipeCardView:SwipeCardView.ItemTemplate>
+            </swipeCardView:SwipeCardView>
+            <ImageButton Source="KruisBox.png" Grid.Row="3" Grid.Column="1"
+                         BackgroundColor="Transparent" Aspect="AspectFit" Clicked="Kruis_Clicked"/>
+            <ImageButton x:Name="HartBox" Source="HartBox.png" Grid.Row="3" Grid.Column="3"
+                         BackgroundColor="Transparent" Aspect="AspectFit" Clicked="Hart_Clicked"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
+
+ 
